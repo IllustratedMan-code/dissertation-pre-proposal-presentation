@@ -15,13 +15,37 @@ transition: slide-left
 mdc: true
 ---
 
+# Dissertation Pre-proposal
 
-# Slidev Template
+---
+
+# Aims
+
+- Aim 1: Comparison of PU.1 genomic binding across immune cells reveals cell type-specific roles in autoimmune disease
+- Aim 2: A bioinformatics pipeline manager
+- Aim 3: A detailed understanding of the effect of HPV viral transcriptional regulators on human gene regulation
+- Aim 2 (cont): Design of piphany, the pipeline manager
 
 ---
 
 ```yaml
-src: ./pages/page1.md
+src: ./pages/aim1.md
 ```
 
+---
 
+```yaml
+src: ./pages/aim2.md
+```
+
+---
+
+```yaml
+src: ./pages/aim3.md
+```
+
+---
+
+```yaml
+src: ./pages/aim2-cont.md
+```

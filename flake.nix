@@ -24,7 +24,7 @@
         # Equivalent to  inputs'.nixpkgs.legacyPackages.hello;
         #packages.default = pkgs.hello;
         devShells.default = pkgs.mkShell{
-          packages = [ pkgs.bun ];
+          packages = [ pkgs.bun pkgs.charm-freeze ];
         };
 
         packages.default = with pkgs; writeShellScriptBin "bundev" ''
