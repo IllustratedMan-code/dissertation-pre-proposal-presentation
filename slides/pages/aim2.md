@@ -125,13 +125,13 @@ color="red"/>
 
 <img v-drag="[94,220,392,410]" src="/bsub-script.svg" />
 
-<img v-drag="[604,-89,392,410]" src="/slurm-script.svg" />
+<img v-drag="[577,-75,392,410]" src="/slurm-script.svg" />
 
-<img v-drag="[626,215,334,424]" src="/piphany-bsub.svg" />
-
-<v-drag-arrow pos="421,434,158,-1"/>
+<img v-drag="[623,211,334,424]" src="/piphany-bsub.svg" />
 
 <v-drag-arrow pos="421,434,158,-1"/>
+
+<v-drag-arrow pos="775,240,1,61"/>
 
 ---
 
@@ -158,7 +158,6 @@ color="red"/>
 
 - Written in rust
 - Pipelines are written in scheme with macros for custom syntax
-- Polars dataframes for metadata
 - Caching by default
   - Iterative caching only reruns what is needed
 - Parallel by default
@@ -175,8 +174,197 @@ color="red"/>
 
 ---
 
+# Why Scheme?
+
+- Piphany pipelines are written in scheme, a variant of lisp
+
+```scheme
+
+; (FUNCTION ARGS) => return
+(print "hello world") ; => "hello world"
+(+ 1 2) ; => 3
+```
+
+- Macros extend the language when needed
+
+```scheme
+(define x 5)
+x ; => 5
+
+(~> 5
+	(+ 6)
+	(- 3)) ; => 8
+
+```
+
+- Now you know scheme!
+
+Scheme is easily embeddable into a rust program and supports custom syntax,
+drastically reducing the development burden of writing a DSL
+
+---
+
 # Pipeline Hello World
 
 <img v-drag="[34,133,452,330]" src="/piphany-hello-world.svg" />
 
-<img v-drag="[558,150,327,268]" src="/code-shots/piphany-hello.svg" />
+<img v-drag="[531,11,379,311]" src="/code-shots/piphany-hello.svg" />
+
+<img v-drag="[500,343,448,180]" src="/code-shots/piphany-hello-config.svg"/>
+
+---
+
+# Using files in processes
+
+<img v-drag="[30,96,462,437]" src=/code-shots/piphany-hello-file.svg />
+
+<img v-drag="[565,27,349,493]" src="/piphany-files-dag.svg" />
+
+<v-drag-arrow v-click=1 color="red" pos="653,199,6,69"/>
+<v-drag-arrow v-click=2 color="orange" pos="926,252,-50,51"/>
+<v-drag-arrow v-click=2 color="orange" pos="926,380,-50,51"/>
+
+---
+
+# Other features
+
+- Metadata as polars dataframes
+- Test nodes
+
+---
+
+# Container Backends
+
+- Containers will run on singularity/apptainer/podman/docker depending on what is available
+
+```scheme
+(process!
+	name : "docker-hello"
+	container : community.wave.seqera.io/library/pip_biopython:f09d93c7760ef5be
+	script : #<"""
+	#!/usr/bin/env python
+	import biopython
+	"""
+)
+```
+
+- This makes the process reproducible and portable for a variety of systems!
+
+---
+
+# Executor Backends
+
+Different HPCs have different ways to submit jobs
+
+- bsub (LSF)
+- sbatch (slurm)
+- more eventually
+
+```scheme
+;; .piphanyConfig
+(config "executor" "LSF")
+
+```
+
+---
+
+# Parameters
+
+The pipeline will support declared and command line parameters
+
+- Defined in the config
+
+```scheme
+;; .piphanyConfig
+
+(param
+	"dataPath"
+	PATH ;; param type
+	"/data/mydata.csv" ;; default value
+)
+```
+
+```shell
+piphany run --params dataPath /data/other/mydata.csv
+```
+
+- usable in the pipeline
+
+```scheme
+
+(define data (file! params.dataPath))
+
+```
+
+---
+
+# Error handling philosophy
+
+- Each error must have clear steps for resolution
+- Small bactraces
+- Each error will have a docs page
+
+```scheme
+(file! "this/is/my/path")
+```
+
+```
+Piphany Error[04]: Path does not exist!
+  ┌─ :1:2
+  │
+1 │ (file! "this/is/my/path")
+  |  ^^^^^ "this/is/my/path" does not exist! Make sure to specify an existing path
+For more info on this error, visit: https://piphany-docs/error04
+```
+
+- Rust can guarantee error predictability
+
+---
+
+# Ideas
+
+<v-clicks>
+
+- Nix package manager integration
+- Process viewer (web based?)
+- AWS/Google executor backends
+- "doctor" command that checks for environment problems (e.g lack of docker)
+- "check" command that checks for reproducibility problems (e.g. absolute paths)
+- Process "groups" for caching
+
+</v-clicks>
+
+<img v-click="[1, 2]" v-drag="[620,17,315,331]" src="/code-shots/nix-support.svg" />
+
+<!--  LocalWords:  reproducibility
+ -->
+
+---
+
+# Comparison to other tools
+
+- Nextflow
+- Snakemake
+- WDL (Sprocket)
+
+---
+
+# Nextflow
+
+- Most features and compatibility
+- Bad error handling
+- Separation between code and model
+- Caching must be enabled
+- Reliance on Java and Groovy
+- Learning curve stalls adoption
+- nf-core is difficult to contribute to
+
+<img v-drag="[425,147,487,80]" src="/nextflow.svg" />
+
+---
+
+# Snakemake
+
+- Relies on plugins for compatibility
+- Requires python, making it more difficult to install
+- No separation between data and work directories

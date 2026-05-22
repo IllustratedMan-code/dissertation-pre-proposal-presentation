@@ -24,7 +24,6 @@ mdc: true
 - Aim 1: Comparison of PU.1 genomic binding across immune cells reveals cell type-specific roles in autoimmune disease
 - Aim 2: A bioinformatics pipeline manager
 - Aim 3: A detailed understanding of the effect of HPV viral transcriptional regulators on human gene regulation
-- Aim 2 (cont): Design of piphany, the pipeline manager
 
 ---
 
