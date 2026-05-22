@@ -24,5 +24,10 @@ piphany-hello-file.svg: piphany-hello-file.scm user.json
 nix-support.svg: nix-support.scm user.json
 	${CC} $< -o $@
 
+metadata.svg: metadata.scm user.json
+	${CC} $< -o $@
 
-all: piphany-hello.svg piphany-hello-config.svg piphany-hello-file.svg nix-support.svg
+test.svg: test.scm user.json
+	${CC} $< -o $@
+
+all: piphany-hello.svg piphany-hello-config.svg piphany-hello-file.svg nix-support.svg metadata.svg test.svg

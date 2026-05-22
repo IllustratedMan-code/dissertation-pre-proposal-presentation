@@ -125,7 +125,7 @@ color="red"/>
 
 <img v-drag="[94,220,392,410]" src="/bsub-script.svg" />
 
-<img v-drag="[577,-75,392,410]" src="/slurm-script.svg" />
+<img v-drag="[587,-86,392,410]" src="/slurm-script.svg" />
 
 <img v-drag="[623,211,334,424]" src="/piphany-bsub.svg" />
 
@@ -146,7 +146,7 @@ color="red"/>
 (process!
 	container : "docker://python:alpine3.23"
 	container_runtime : "singularity"
-	script #<"""
+	script #<<"""
 		{{script}} --say "hello world"
 	"""
 )
@@ -165,12 +165,22 @@ color="red"/>
 
 ---
 
+# What's a hash?
+
+- Equal-length unique identifiers for any amount of data
+
+<img v-drag="[297,140,401,377]" src="/hash.svg"/>
+
+---
+
 ## The model
 
 - Files and computational processes are represented as nodes (derivations)
 - Nodes are connected together with directed edges, forming a directed acyclic graph (DAG)
 - Each node has a unique sha256 hash, calculated from the node's contents and any input nodes' hashes
   - If any node's hash changes, any dependent nodes' hashes would also change
+
+<img v-drag="[302,206,407,328]" src="/model-hash.svg" />
 
 ---
 
@@ -202,13 +212,15 @@ x ; => 5
 Scheme is easily embeddable into a rust program and supports custom syntax,
 drastically reducing the development burden of writing a DSL
 
+<img v-drag="[829,56,91,74]" src="/steel.png" />
+
 ---
 
 # Pipeline Hello World
 
 <img v-drag="[34,133,452,330]" src="/piphany-hello-world.svg" />
 
-<img v-drag="[531,11,379,311]" src="/code-shots/piphany-hello.svg" />
+<img v-drag="[531,11,379,321]" src="/code-shots/piphany-hello.svg" />
 
 <img v-drag="[500,343,448,180]" src="/code-shots/piphany-hello-config.svg"/>
 
@@ -226,10 +238,30 @@ drastically reducing the development burden of writing a DSL
 
 ---
 
+```yaml
+layout: two-cols
+```
+
 # Other features
 
 - Metadata as polars dataframes
+
+<img v-drag="[532,22,419,402]" src="/code-shots/metadata.svg"/>
+
+```
+┌─────┬─────┬─────────────────────────────────┐
+│ a   ┆ b   ┆ c                               │
+│ --- ┆ --- ┆ ---                             │
+│ i64 ┆ i64 ┆ Derivation                      │
+╞═════╪═════╪═════════════════════════════════╡
+│ 1   ┆ 1   ┆ main.rs-a2327dce5ced50de170443… │
+│ 2   ┆ 2   ┆ vm.csv-aafa4ed51de01f59026e07d… │
+└─────┴─────┴─────────────────────────────────┘
+```
+
 - Test nodes
+
+<img v-drag="[151,269,407,302]" src="/code-shots/test.svg" />
 
 ---
 
@@ -241,7 +273,7 @@ drastically reducing the development burden of writing a DSL
 (process!
 	name : "docker-hello"
 	container : community.wave.seqera.io/library/pip_biopython:f09d93c7760ef5be
-	script : #<"""
+	script : #<<"""
 	#!/usr/bin/env python
 	import biopython
 	"""
@@ -331,6 +363,7 @@ For more info on this error, visit: https://piphany-docs/error04
 - "doctor" command that checks for environment problems (e.g lack of docker)
 - "check" command that checks for reproducibility problems (e.g. absolute paths)
 - Process "groups" for caching
+- Automatic quoting for interpolations
 
 </v-clicks>
 
@@ -354,12 +387,12 @@ For more info on this error, visit: https://piphany-docs/error04
 - Most features and compatibility
 - Bad error handling
 - Separation between code and model
-- Caching must be enabled
+- Caching must be enabled `--resume`
 - Reliance on Java and Groovy
 - Learning curve stalls adoption
 - nf-core is difficult to contribute to
 
-<img v-drag="[425,147,487,80]" src="/nextflow.svg" />
+<img v-drag="[434,25,487,80]" src="/nextflow.svg" />
 
 ---
 
@@ -368,3 +401,22 @@ For more info on this error, visit: https://piphany-docs/error04
 - Relies on plugins for compatibility
 - Requires python, making it more difficult to install
 - No separation between data and work directories
+- Relies on timestamps to realize DAG
+- Uses make-style syntax, using wildcards to manage inputs and outputs
+
+<img v-drag="[545,94,397,89]" src="/snakemake.svg" />
+
+---
+
+# WDL (Sprocket)
+
+- Language spec is separate from implementation
+- implementation documentation is separate from language documentation
+- Sprocket is a St. Jude Children's research hospital initiative
+- limited number of executor backends.
+  - container + job submitter are a unit (i.e. lsf-apptainer)
+- Pipeline language is limited (a pure DSL)
+- Caching must be enabled
+- Written in rust
+
+<img v-drag="[380,301,781,199]" src="../public/sprocket-logo-dark.png" />

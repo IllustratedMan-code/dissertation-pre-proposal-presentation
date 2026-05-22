@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="196.51334mm"
+   height="158.25633mm"
+   viewBox="0 0 196.51334 158.25633"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   sodipodi:docname="model-hash.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.0084456"
+     inkscape:cx="362.93481"
+     inkscape:cy="249.88954"
+     inkscape:window-width="1920"
+     inkscape:window-height="1080"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="Triangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-4.3599996,-17.869854)">
+    <circle
+       style="fill:none;stroke:#000000;stroke-width:1.365;stroke-miterlimit:3.4;stroke-opacity:1;paint-order:markers stroke fill"
+       id="path1"
+       cx="46.045498"
+       cy="56.015457"
+       r="21.907686" />
+    <text
+       xml:space="preserve"
+       style="font-size:14.1111px;font-family:'JetBrainsMono Nerd Font';-inkscape-font-specification:'JetBrainsMono Nerd Font';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.365;stroke-miterlimit:3.4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       x="45.389576"
+       y="60.082153"
+       id="text2"><tspan
+         sodipodi:role="line"
+         id="tspan2"
+         style="stroke-width:1.365"
+         x="45.389576"
+         y="60.082153">A</tspan></text>
+    <circle
+       style="fill:none;stroke:#000000;stroke-width:1.365;stroke-miterlimit:3.4;stroke-opacity:1;paint-order:markers stroke fill"
+       id="path1-3"
+       cx="163.01656"
+       cy="56.863251"
+       r="21.907686" />
+    <text
+       xml:space="preserve"
+       style="font-size:14.1111px;font-family:'JetBrainsMono Nerd Font';-inkscape-font-specification:'JetBrainsMono Nerd Font';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.365;stroke-miterlimit:3.4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       x="162.36064"
+       y="61.717049"
+       id="text2-6"><tspan
+         sodipodi:role="line"
+         id="tspan2-0"
+         style="stroke-width:1.365"
+         x="162.36064"
+         y="61.717049">B</tspan></text>
+    <circle
+       style="fill:none;stroke:#000000;stroke-width:1.365;stroke-miterlimit:3.4;stroke-opacity:1;paint-order:markers stroke fill"
+       id="path1-3-3"
+       cx="102.28426"
+       cy="139.9996"
+       r="21.907686" />
+    <text
+       xml:space="preserve"
+       style="font-size:14.1111px;font-family:'JetBrainsMono Nerd Font';-inkscape-font-specification:'JetBrainsMono Nerd Font';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.365;stroke-miterlimit:3.4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       x="101.62835"
+       y="144.85341"
+       id="text2-6-7"><tspan
+         sodipodi:role="line"
+         id="tspan2-0-5"
+         style="stroke-width:1.365"
+         x="101.62835"
+         y="144.85341">C</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.76111px;font-family:'JetBrainsMono Nerd Font';-inkscape-font-specification:'JetBrainsMono Nerd Font';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.365;stroke-miterlimit:3.4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       x="47.488518"
+       y="23.613073"
+       id="text3"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         style="font-size:7.76111px;stroke-width:1.365"
+         x="47.488518"
+         y="23.613073">&quot;A&quot; Hash = Contents</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.76111px;font-family:'JetBrainsMono Nerd Font';-inkscape-font-specification:'JetBrainsMono Nerd Font';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.365;stroke-miterlimit:3.4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       x="157.29468"
+       y="24.439945"
+       id="text3-8"><tspan
+         sodipodi:role="line"
+         id="tspan3-7"
+         style="font-size:7.76111px;stroke-width:1.365"
+         x="157.29468"
+         y="24.439945">&quot;B&quot; Hash = Contents</tspan></text>
+    <path
+       style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.965;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle)"
+       d="M 58.207504,74.237133 83.432862,112.03092"
+       id="path3"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#path1" />
+    <path
+       style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.965;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle)"
+       d="M 150.39476,74.769525 123.57509,112.81802"
+       id="path4"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#path1-3" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.7611px;font-family:'JetBrainsMono Nerd Font';-inkscape-font-specification:'JetBrainsMono Nerd Font';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.965;stroke-miterlimit:3.4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       x="104.42226"
+       y="176.04857"
+       id="text4"><tspan
+         sodipodi:role="line"
+         id="tspan4"
+         style="stroke-width:1.965"
+         x="104.42226"
+         y="176.04857">&quot;C&quot; Hash = Contents + &quot;B&quot; Hash + &quot;A&quot; Hash</tspan></text>
+  </g>
+</svg>
