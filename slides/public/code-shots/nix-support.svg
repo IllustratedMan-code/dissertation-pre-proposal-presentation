@@ -14,10 +14,10 @@
 </text><text x="60.00px" y="108.60px" xml:space="preserve">
 </text><text x="60.00px" y="125.40px" xml:space="preserve"><tspan fill="#e8e8a8">(</tspan><tspan fill="#00dc7f">process!</tspan>
 </text><text x="60.00px" y="142.20px" xml:space="preserve"> name : <tspan fill="#e38356">&quot;nix-hello&quot;</tspan>
-</text><text x="60.00px" y="159.00px" xml:space="preserve"> nix : <tspan fill="#ff7f83">#</tspan>&lt;<tspan fill="#e38356">&quot;&quot;&quot;
+</text><text x="60.00px" y="159.00px" xml:space="preserve"> nix : <tspan fill="#ff7f83">#</tspan>&lt;&lt;<tspan fill="#e38356">&quot;&quot;&quot;
 </tspan></text><text x="60.00px" y="175.80px" xml:space="preserve"><tspan fill="#e38356">  cowsay
 </tspan></text><text x="60.00px" y="192.60px" xml:space="preserve"><tspan fill="#e38356"> &quot;&quot;&quot;</tspan>
-</text><text x="60.00px" y="209.40px" xml:space="preserve"> script : <tspan fill="#ff7f83">#</tspan>&lt;<tspan fill="#e38356">&quot;&quot;&quot;
+</text><text x="60.00px" y="209.40px" xml:space="preserve"> script : <tspan fill="#ff7f83">#</tspan>&lt;&lt;<tspan fill="#e38356">&quot;&quot;&quot;
 </tspan></text><text x="60.00px" y="226.20px" xml:space="preserve"><tspan fill="#e38356">  cowsay &apos;Hi world!&apos;
 </tspan></text><text x="60.00px" y="243.00px" xml:space="preserve"><tspan fill="#e38356"> &quot;&quot;&quot;</tspan>
 </text><text x="60.00px" y="259.80px" xml:space="preserve"> <tspan fill="#e8e8a8">)</tspan>

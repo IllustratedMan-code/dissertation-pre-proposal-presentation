@@ -75,11 +75,15 @@ transition: none
 
 ## The consequences
 
+<v-clicks>
+
 - You made a change to step 1 and forgot to rerun the pipeline from the beginning before modifying step 4
-  - The state of the outputs is now out of sync with the code!
-  - After realizing this, you find that your change to step 4 is incompatible with step 1!
-  - You can't revert to a version that worked because you didn't use version control!
-  - You spend hours debugging and more hours of compute time testing 🙁
+- The state of the outputs is now out of sync with the code!
+- After realizing this, you find that your change to step 4 is incompatible with step 1!
+- You can't revert to a version that worked because you didn't use version control!
+- You spend hours debugging and more hours of compute time testing 🙁
+
+</v-clicks>
 
 ---
 
@@ -89,17 +93,25 @@ transition: none
 
 ## The consequences
 
+<v-clicks>
+
 - Another lab wants to use your pipeline, but they don't use the same HPC
-  - They have to make many modifications to get your code to work
-  - Their results don't look quite the same, but you can't figure out why because they had to make so many modifications to even run your code
-  - Many hours of both labs' time is lost to solving this problem 🙁
+- They have to make many modifications to get your code to work
+- Their results don't look quite the same, but you can't figure out why because they had to make so many modifications to even run your code
+- Many hours of both labs' time is lost to solving this problem 🙁
+
+</v-clicks>
 
 ---
 
 ## The consequences
 
+<v-clicks>
+
 - You weren't very organized at the beginning of the analysis, and haven't looked at the code in a while.
-  - You've forgotten how your scripts are supposed to connect to each other 😰
+- You've forgotten how your scripts are supposed to connect to each other 😰
+
+</v-clicks>
 
 ---
 
@@ -156,12 +168,16 @@ color="red"/>
 
 # Introducing Piphany
 
+<v-clicks>
+
 - Written in rust
 - Pipelines are written in scheme with macros for custom syntax
 - Caching by default
   - Iterative caching only reruns what is needed
 - Parallel by default
 - Almost as easy as writing scripts normally
+
+</v-clicks>
 
 ---
 
@@ -304,6 +320,8 @@ Different HPCs have different ways to submit jobs
 
 The pipeline will support declared and command line parameters
 
+<v-clicks>
+
 - Defined in the config
 
 ```scheme
@@ -328,9 +346,15 @@ piphany run --params dataPath /data/other/mydata.csv
 
 ```
 
+- Metadata schema requirements?
+
+</v-clicks>
+
 ---
 
 # Error handling philosophy
+
+<v-clicks>
 
 - Each error must have clear steps for resolution
 - Small bactraces
@@ -350,6 +374,8 @@ For more info on this error, visit: https://piphany-docs/error04
 ```
 
 - Rust can guarantee error predictability
+
+</v-clicks>
 
 ---
 
@@ -419,4 +445,4 @@ For more info on this error, visit: https://piphany-docs/error04
 - Caching must be enabled
 - Written in rust
 
-<img v-drag="[380,301,781,199]" src="../public/sprocket-logo-dark.png" />
+<img v-drag="[380,301,781,199]" src="/sprocket-logo-dark.png" />

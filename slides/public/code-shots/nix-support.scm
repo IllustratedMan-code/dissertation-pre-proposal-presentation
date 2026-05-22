@@ -2,10 +2,10 @@
 
 (process!
  name : "nix-hello"
- nix : #<"""
+ nix : #<<"""
   cowsay
  """
- script : #<"""
+ script : #<<"""
   cowsay 'Hi world!'
  """
  )
