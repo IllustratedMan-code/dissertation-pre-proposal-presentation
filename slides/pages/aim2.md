@@ -57,7 +57,6 @@ echo "hi there" | sed 's/ there/, world/g' | cowsay
 - Large computational requirements (memory, compute time)
 - An organized person may notate the scripts by their step number or with some
   descriptive name
-  - e.g clean-step-1, normalize-step-2, transform-step-3, finish-up-step-4
 
 ```mermaid
 graph LR;
@@ -410,6 +409,8 @@ For more info on this error, visit: https://piphany-docs/error04
 
 # Nextflow
 
+<v-clicks>
+
 - Most features and compatibility
 - Bad error handling
 - Separation between code and model
@@ -418,11 +419,15 @@ For more info on this error, visit: https://piphany-docs/error04
 - Learning curve stalls adoption
 - nf-core is difficult to contribute to
 
+</v-clicks>
+
 <img v-drag="[434,25,487,80]" src="/nextflow.svg" />
 
 ---
 
 # Snakemake
+
+<v-clicks>
 
 - Relies on plugins for compatibility
 - Requires python, making it more difficult to install
@@ -430,19 +435,25 @@ For more info on this error, visit: https://piphany-docs/error04
 - Relies on timestamps to realize DAG
 - Uses make-style syntax, using wildcards to manage inputs and outputs
 
+</v-clicks>
+
 <img v-drag="[545,94,397,89]" src="/snakemake.svg" />
 
 ---
 
 # WDL (Sprocket)
 
+<v-clicks>
+
 - Language spec is separate from implementation
 - implementation documentation is separate from language documentation
 - Sprocket is a St. Jude Children's research hospital initiative
-- limited number of executor backends.
+- Limited number of executor backends.
   - container + job submitter are a unit (i.e. lsf-apptainer)
 - Pipeline language is limited (a pure DSL)
 - Caching must be enabled
 - Written in rust
+
+</v-clicks>
 
 <img v-drag="[380,301,781,199]" src="/sprocket-logo-dark.png" />

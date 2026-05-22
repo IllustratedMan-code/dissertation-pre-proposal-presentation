@@ -17,6 +17,8 @@ mdc: true
 
 # Dissertation Pre-proposal
 
+David Lewis
+
 ---
 
 # Aims
